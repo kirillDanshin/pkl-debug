@@ -1,0 +1,24 @@
+@go.Package { name = "github.com/kirillDanshin/pkl-debug/config" }
+
+module KirillDanshin.PklDebug1.Config
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.3#/go.pkl"
+
+import "./base.pkl" as baseCfg
+
+env: String
+
+class Resource {
+    region: String = "eu-north-1"
+    endpoint: String?
+    resourceName: String
+    fullResourceName: String
+    function getFullResourceName() = "example-\(baseCfg.env)-\(resourceName)"
+}
+
+class ResourceHolder {
+    resourceA: Resource
+    resourceB: Resource
+}
+
+resources: ResourceHolder

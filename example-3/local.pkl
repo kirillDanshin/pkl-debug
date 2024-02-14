@@ -1,0 +1,15 @@
+amends "./generic_env.pkl"
+
+env = "local"
+
+resources {
+    resourceA {
+        endpoint = "http://localhost:42069"
+        fullResourceName = this.getFullResourceName(env)
+    }
+
+    resourceB {
+        endpoint = "http://localhost:42024"
+        fullResourceName = this.getFullResourceName(env)
+    }
+}

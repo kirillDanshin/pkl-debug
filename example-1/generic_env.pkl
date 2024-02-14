@@ -1,0 +1,11 @@
+amends "./base.pkl"
+
+resources {
+    resourceA {
+        resourceName = "resourceA"
+    }
+
+    resourceB {
+        resourceName = "resourceB"
+    }
+}
